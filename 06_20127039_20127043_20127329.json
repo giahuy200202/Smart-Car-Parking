@@ -1,0 +1,4389 @@
+[
+    {
+        "id": "3a98f53728c7e715",
+        "type": "tab",
+        "label": "Flow 8",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d7fbc623fe77ce82",
+        "type": "ui_text",
+        "z": "3a98f53728c7e715",
+        "group": "6d05da2bc5a192bb",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "x": 2490,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "aad2efdec23b3335",
+        "type": "ui_text",
+        "z": "3a98f53728c7e715",
+        "group": "babce6fc67eb89b7",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Gmail",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 470,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "f0b2a2feb24e41fc",
+        "type": "ui_text",
+        "z": "3a98f53728c7e715",
+        "group": "babce6fc67eb89b7",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Time entrance",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 2840,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "47e85ea916513a20",
+        "type": "ui_text",
+        "z": "3a98f53728c7e715",
+        "group": "ea6febeb9bb86144",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Price",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1930,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "b0992cc340f61c4a",
+        "type": "ui_switch",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "label": "High security",
+        "tooltip": "",
+        "group": "babce6fc67eb89b7",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 910,
+        "y": 1400,
+        "wires": [
+            [
+                "2730014cad59d31e"
+            ]
+        ]
+    },
+    {
+        "id": "5e80c936db032e6b",
+        "type": "ui_dropdown",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "label": "Payment method",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "ea6febeb9bb86144",
+        "order": 13,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Banking",
+                "value": "Banking",
+                "type": "str"
+            },
+            {
+                "label": "In cash",
+                "value": "In cash",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 150,
+        "y": 2200,
+        "wires": [
+            [
+                "9d03739bab04cd9d",
+                "bac155344d8e539d"
+            ]
+        ]
+    },
+    {
+        "id": "f688649a12100d65",
+        "type": "ui_gauge",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "group": "9e5f3603f9e80331",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Dangerous rate",
+        "label": "%",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1080,
+        "y": 3300,
+        "wires": []
+    },
+    {
+        "id": "c7de3e2109916429",
+        "type": "ui_text",
+        "z": "3a98f53728c7e715",
+        "group": "ea6febeb9bb86144",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "7h30 - 21h59",
+        "format": "{{\"5000/hour\"}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 130,
+        "y": 2060,
+        "wires": []
+    },
+    {
+        "id": "55312546921cd108",
+        "type": "ui_text",
+        "z": "3a98f53728c7e715",
+        "group": "ea6febeb9bb86144",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "22h - 7h29",
+        "format": "{{\"10.000/hour\"}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 130,
+        "y": 2120,
+        "wires": []
+    },
+    {
+        "id": "bed8be1bc0484364",
+        "type": "ui_form",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "label": "",
+        "group": "b434e1a6b820424f",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Gmail",
+                "value": "gmail",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Password",
+                "value": "password",
+                "type": "text",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "gmail": "",
+            "password": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 70,
+        "y": 580,
+        "wires": [
+            [
+                "ef9dc6d6ae69c1d8"
+            ]
+        ]
+    },
+    {
+        "id": "4bd118f56aa8cef4",
+        "type": "switch",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "property": "checkMail",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 650,
+        "y": 580,
+        "wires": [
+            [
+                "a2302a43833ed2f6"
+            ],
+            [
+                "9eb85d1669ad9b2a"
+            ]
+        ]
+    },
+    {
+        "id": "4604bc80f8161327",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Go to login page",
+        "func": "msg.payload = {\n    \"group\": {\n        \"hide\": [\n            \"Parking_System_Welcome_to_Parking_System\",\n            \"Parking_System_Parking_Guard\",\n            \"Parking_System_Information\",\n            \"Parking_System_Payment\",\n            \"Parking_System_Safety\",\n            \"Parking_System_Change_password\"\n        ],\n        \"show\": [\n            \"Parking_System_Login\"\n        ]\n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 320,
+        "wires": [
+            [
+                "7612ffa70e8cb16b"
+            ]
+        ]
+    },
+    {
+        "id": "7612ffa70e8cb16b",
+        "type": "ui_ui_control",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "events": "change",
+        "x": 480,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "95dbf87d45a541ba",
+        "type": "ui_text",
+        "z": "3a98f53728c7e715",
+        "group": "f54ef33d5fc74833",
+        "order": 1,
+        "width": "6",
+        "height": "4",
+        "name": "Description",
+        "label": "Automatic parking management system is an IOT application that helps to automate and optimize the parking management and monitoring process. The application is equipped with automatic lighting system, fire alarm, intelligent anti-theft, and more to serve the driver with the best experience.",
+        "format": "",
+        "layout": "row-spread",
+        "className": "",
+        "x": 90,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "74012a6d5c63fc2d",
+        "type": "ui_button",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "group": "f54ef33d5fc74833",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "GET STARTED",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "directions_car",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 100,
+        "y": 320,
+        "wires": [
+            [
+                "4604bc80f8161327",
+                "869f7a1a2b9a2c97"
+            ]
+        ]
+    },
+    {
+        "id": "a9adabd7f1cce753",
+        "type": "comment",
+        "z": "3a98f53728c7e715",
+        "name": "Welcome to Parking System",
+        "info": "",
+        "x": 140,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "8d8565d72d657783",
+        "type": "comment",
+        "z": "3a98f53728c7e715",
+        "name": "Login",
+        "info": "",
+        "x": 70,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "bdbbbb56a2d4daf1",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Go to parking guard page",
+        "func": "msg.payload = {\n    \"group\": {\n        \"hide\": [\n            \"Parking_System_Welcome_to_Parking_System\",\n            \"Parking_System_Login\",\n            \"Parking_System_Information\",\n            \"Parking_System_Payment\",\n            \"Parking_System_Safety\",\n            \"Parking_System_Change_password\"\n        ],\n        \"show\": [\n            \"Parking_System_Parking_Guard\"\n        ]\n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1350,
+        "y": 480,
+        "wires": [
+            [
+                "b1e5fb45ae9b6030"
+            ]
+        ]
+    },
+    {
+        "id": "b1e5fb45ae9b6030",
+        "type": "ui_ui_control",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "events": "all",
+        "x": 1560,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5db2d744ef63fd17",
+        "type": "ui_toast",
+        "z": "3a98f53728c7e715",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "className": "",
+        "topic": "Gmail is incorrect",
+        "name": "Alert",
+        "x": 990,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "629cf18b902eda21",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Get gmail",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/gmail.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 340,
+        "y": 580,
+        "wires": [
+            [
+                "d8014b7edfdceb18"
+            ]
+        ]
+    },
+    {
+        "id": "a2302a43833ed2f6",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Get pawword",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/pass.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 810,
+        "y": 540,
+        "wires": [
+            [
+                "654d958072ebc16a"
+            ]
+        ]
+    },
+    {
+        "id": "d8014b7edfdceb18",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Check email",
+        "func": "if(msg.payload===msg.gmail){\n    msg.checkMail=1;\n}\nelse msg.checkMail=0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 580,
+        "wires": [
+            [
+                "4bd118f56aa8cef4"
+            ]
+        ]
+    },
+    {
+        "id": "ef9dc6d6ae69c1d8",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Get data",
+        "func": "msg.gmail = msg.payload.gmail;\nmsg.password = msg.payload.password;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 200,
+        "y": 580,
+        "wires": [
+            [
+                "629cf18b902eda21"
+            ]
+        ]
+    },
+    {
+        "id": "654d958072ebc16a",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Check password",
+        "func": "if(msg.payload===msg.password){\n    msg.checkPass=1;\n}\nelse msg.checkPass=0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 540,
+        "wires": [
+            [
+                "354b9fba6c9adea8"
+            ]
+        ]
+    },
+    {
+        "id": "354b9fba6c9adea8",
+        "type": "switch",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "property": "checkPass",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1150,
+        "y": 540,
+        "wires": [
+            [
+                "bdbbbb56a2d4daf1",
+                "5c967c7dc7841145"
+            ],
+            [
+                "f905ccf92e4d3902"
+            ]
+        ]
+    },
+    {
+        "id": "c124ff58dbfc2109",
+        "type": "ui_toast",
+        "z": "3a98f53728c7e715",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "Password is incorrect",
+        "name": "Alert",
+        "x": 1490,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9ba198dc64e09446",
+        "type": "comment",
+        "z": "3a98f53728c7e715",
+        "name": "Parking guard",
+        "info": "",
+        "x": 110,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "81aa1ddc09e20c00",
+        "type": "ui_button",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "group": "babce6fc67eb89b7",
+        "order": 15,
+        "width": "4",
+        "height": "1",
+        "passthru": false,
+        "label": "Change password",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "autorenew",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 150,
+        "y": 1540,
+        "wires": [
+            [
+                "2ff0d3944084eb71"
+            ]
+        ]
+    },
+    {
+        "id": "f8f9bb30c5b78676",
+        "type": "ui_button",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "group": "6d05da2bc5a192bb",
+        "order": 2,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "Get car",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "security",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 100,
+        "y": 980,
+        "wires": [
+            [
+                "2001051058e76085"
+            ]
+        ]
+    },
+    {
+        "id": "ee3f35cfe7d39203",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Go to welcome page",
+        "func": "msg.payload = {\n    \"group\": {\n        \"hide\": [\n            \"Parking_System_Login\",\n            \"Parking_System_Parking_Guard\",\n            \"Parking_System_Information\",\n            \"Parking_System_Payment\",\n            \"Parking_System_Safety\",\n            \"Parking_System_Change_password\"\n        ],\n        \"show\": [\n            \"Parking_System_Welcome_to_Parking_System\"\n        ]\n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 100,
+        "wires": [
+            [
+                "4aa85adf8a07def1"
+            ]
+        ]
+    },
+    {
+        "id": "71cbc3d93a23b34f",
+        "type": "inject",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 100,
+        "wires": [
+            [
+                "ee3f35cfe7d39203",
+                "cb43d2b6442589b3"
+            ]
+        ]
+    },
+    {
+        "id": "3966f7b9da4464e1",
+        "type": "comment",
+        "z": "3a98f53728c7e715",
+        "name": "Initialize",
+        "info": "",
+        "x": 80,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "f0feb183717e6080",
+        "type": "ui_button",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "group": "6d05da2bc5a192bb",
+        "order": 1,
+        "width": "4",
+        "height": "1",
+        "passthru": false,
+        "label": "More information",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "info_outline",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 130,
+        "y": 920,
+        "wires": [
+            [
+                "23c4a09ae5399d69"
+            ]
+        ]
+    },
+    {
+        "id": "7e5d617779121e36",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Random code",
+        "func": "let result = Math.floor(Math.random() * (9999 - 1000) + 1000);\nmsg.payload=''+result;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1800,
+        "y": 500,
+        "wires": [
+            [
+                "55e33b2e357cbd21",
+                "c01dd0384c7903d8",
+                "f888eb1d10bda67c"
+            ]
+        ]
+    },
+    {
+        "id": "4e79f5f6ba7116bb",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Go to login page",
+        "func": "msg.payload = {\n    \"group\": {\n        \"hide\": [\n            \"Parking_System_Welcome_to_Parking_System\",\n            \"Parking_System_Parking_Guard\",\n            \"Parking_System_Information\",\n            \"Parking_System_Payment\",\n            \"Parking_System_Safety\",\n            \"Parking_System_Change_password\"\n        ],\n        \"show\": [\n            \"Parking_System_Login\"\n        ]\n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1980,
+        "y": 1660,
+        "wires": [
+            [
+                "ac1e91ac8d3b1701"
+            ]
+        ]
+    },
+    {
+        "id": "ac1e91ac8d3b1701",
+        "type": "ui_ui_control",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "events": "all",
+        "x": 2140,
+        "y": 1660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "23c4a09ae5399d69",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Go to information page",
+        "func": "msg.payload = {\n    \"group\": {\n        \"hide\": [\n            \"Parking_System_Welcome_to_Parking_System\",\n            \"Parking_System_Parking_Guard\",\n            \"Parking_System_Login\",\n            \"Parking_System_Payment\",\n            \"Parking_System_Change_password\"\n        ],\n        \"show\": [\n            \"Parking_System_Information\",\n            \"Parking_System_Safety\"\n        ]\n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 920,
+        "wires": [
+            [
+                "04ea7f2e425a930d"
+            ]
+        ]
+    },
+    {
+        "id": "04ea7f2e425a930d",
+        "type": "ui_ui_control",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "events": "all",
+        "x": 580,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7e9e6b0167170787",
+        "type": "ui_toast",
+        "z": "3a98f53728c7e715",
+        "position": "prompt",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "Cancel",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Confirmation",
+        "x": 470,
+        "y": 980,
+        "wires": [
+            [
+                "78bb2889b68c2a63"
+            ]
+        ]
+    },
+    {
+        "id": "2001051058e76085",
+        "type": "change",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "CAUTIOUS ",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "This function will turn off the protection system of your vehicle. Please type \"YES\" to confirm that you want to get your vehicle  ",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 280,
+        "y": 980,
+        "wires": [
+            [
+                "7e9e6b0167170787"
+            ]
+        ]
+    },
+    {
+        "id": "78bb2889b68c2a63",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "confirm",
+        "func": "if(msg.payload===\"YES\"){\n    msg.confirm=1;\n}\nelse msg.confirm=0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 980,
+        "wires": [
+            [
+                "5115ef1e18edb437"
+            ]
+        ]
+    },
+    {
+        "id": "5115ef1e18edb437",
+        "type": "switch",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "property": "confirm",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 790,
+        "y": 1120,
+        "wires": [
+            [
+                "1aae523d50431f8e",
+                "d64f6b0ae788094d",
+                "fb7ef2c6d8f86a8e"
+            ],
+            [
+                "9dc8bfa5ee5229a2"
+            ]
+        ]
+    },
+    {
+        "id": "1aae523d50431f8e",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Go to payment page",
+        "func": "msg.payload = {\n    \"group\": {\n        \"hide\": [\n            \"Parking_System_Welcome_to_Parking_System\",\n            \"Parking_System_Parking_Guard\",\n            \"Parking_System_Information\",\n            \"Parking_System_Login\",\n            \"Parking_System_Safety\",\n            \"Parking_System_Change_password\"\n        ],\n        \"show\": [\n            \"Parking_System_Payment\",\n        ]\n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 980,
+        "y": 940,
+        "wires": [
+            [
+                "88fa07c01e6abe1f"
+            ]
+        ]
+    },
+    {
+        "id": "88fa07c01e6abe1f",
+        "type": "ui_ui_control",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "events": "all",
+        "x": 1160,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9dc8bfa5ee5229a2",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Go to code page",
+        "func": "msg.payload = {\n    \"group\": {\n        \"hide\": [\n            \"Parking_System_Welcome_to_Parking_System\",\n            \"Parking_System_Payment\",\n            \"Parking_System_Information\",\n            \"Parking_System_Login\",\n            \"Parking_System_Safety\",\n            \"Parking_System_Change_password\"\n        ],\n        \"show\": [\n            \"Parking_System_Parking_Guard\",\n        ]\n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1050,
+        "y": 1180,
+        "wires": [
+            [
+                "b2485e8dc66cd947"
+            ]
+        ]
+    },
+    {
+        "id": "b2485e8dc66cd947",
+        "type": "ui_ui_control",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "events": "all",
+        "x": 1220,
+        "y": 1180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "93b0c79be9c745d0",
+        "type": "comment",
+        "z": "3a98f53728c7e715",
+        "name": "Information",
+        "info": "",
+        "x": 100,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "0949992f7a2b4162",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Get gmail",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/gmail.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 300,
+        "y": 1340,
+        "wires": [
+            [
+                "aad2efdec23b3335"
+            ]
+        ]
+    },
+    {
+        "id": "e3dd989ac4b901b9",
+        "type": "ui_text",
+        "z": "3a98f53728c7e715",
+        "group": "babce6fc67eb89b7",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Password",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 480,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "794de2ccd3c1f646",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Get password",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/pass.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 320,
+        "y": 1400,
+        "wires": [
+            [
+                "e3dd989ac4b901b9"
+            ]
+        ]
+    },
+    {
+        "id": "664715e47b9fb178",
+        "type": "ui_button",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "group": "babce6fc67eb89b7",
+        "order": 13,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "Back",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "arrow_back",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 110,
+        "y": 1500,
+        "wires": [
+            [
+                "e82c829a7915da5d"
+            ]
+        ]
+    },
+    {
+        "id": "e82c829a7915da5d",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Go to code page",
+        "func": "msg.payload = {\n    \"group\": {\n        \"hide\": [\n            \"Parking_System_Welcome_to_Parking_System\",\n            \"Parking_System_Login\",\n            \"Parking_System_Information\",\n            \"Parking_System_Payment\",\n            \"Parking_System_Safety\",\n            \"Parking_System_Change_password\"\n        ],\n        \"show\": [\n            \"Parking_System_Parking_Guard\",\n        ]\n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 1500,
+        "wires": [
+            [
+                "eb3f77226088c36b"
+            ]
+        ]
+    },
+    {
+        "id": "eb3f77226088c36b",
+        "type": "ui_ui_control",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "events": "all",
+        "x": 520,
+        "y": 1500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "01d03865ec40467f",
+        "type": "ui_form",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "label": "",
+        "group": "31f4e15f9c790534",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Old password",
+                "value": "old_pass",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "New password",
+                "value": "new_pass",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Confirmed password",
+                "value": "confirm_pass",
+                "type": "text",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "old_pass": "",
+            "new_pass": "",
+            "confirm_pass": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 90,
+        "y": 1740,
+        "wires": [
+            [
+                "58d21323b3619a08"
+            ]
+        ]
+    },
+    {
+        "id": "997e32d942d6c92b",
+        "type": "switch",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "property": "checkOldPass",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 650,
+        "y": 1720,
+        "wires": [
+            [
+                "09dbbf87a562bb8c"
+            ],
+            [
+                "5553ba30b8d7e137"
+            ]
+        ]
+    },
+    {
+        "id": "85e7e13f898072df",
+        "type": "ui_toast",
+        "z": "3a98f53728c7e715",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "className": "",
+        "topic": "Old password is incorrect",
+        "name": "Alert",
+        "x": 1030,
+        "y": 1780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "81075ffe67433b9b",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Get password",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/pass.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 380,
+        "y": 1740,
+        "wires": [
+            [
+                "78bca06fdb9ee6f3"
+            ]
+        ]
+    },
+    {
+        "id": "78bca06fdb9ee6f3",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Check old password",
+        "func": "if(msg.payload===msg.old_pass){\n    msg.checkOldPass=1;\n}\nelse msg.checkOldPass=0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 1800,
+        "wires": [
+            [
+                "997e32d942d6c92b"
+            ]
+        ]
+    },
+    {
+        "id": "58d21323b3619a08",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Get data",
+        "func": "msg.old_pass = msg.payload.old_pass;\nmsg.new_pass = msg.payload.new_pass;\nmsg.confirm_pass = msg.payload.confirm_pass;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 220,
+        "y": 1740,
+        "wires": [
+            [
+                "81075ffe67433b9b"
+            ]
+        ]
+    },
+    {
+        "id": "5553ba30b8d7e137",
+        "type": "change",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Please try again",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 820,
+        "y": 1780,
+        "wires": [
+            [
+                "85e7e13f898072df"
+            ]
+        ]
+    },
+    {
+        "id": "9eb85d1669ad9b2a",
+        "type": "change",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Please try again",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 820,
+        "y": 640,
+        "wires": [
+            [
+                "5db2d744ef63fd17"
+            ]
+        ]
+    },
+    {
+        "id": "f905ccf92e4d3902",
+        "type": "change",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Please try again",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1320,
+        "y": 600,
+        "wires": [
+            [
+                "c124ff58dbfc2109"
+            ]
+        ]
+    },
+    {
+        "id": "09dbbf87a562bb8c",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Check confirm password",
+        "func": "if(msg.new_pass===msg.confirm_pass){\n    msg.checkNewPass=1;\n}\nelse msg.checkNewPass=0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 1700,
+        "wires": [
+            [
+                "c7ebc19a93781510"
+            ]
+        ]
+    },
+    {
+        "id": "b29593393d7e6d79",
+        "type": "ui_toast",
+        "z": "3a98f53728c7e715",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "className": "",
+        "topic": "Confirmed password must be the same as new password",
+        "name": "Alert",
+        "x": 1390,
+        "y": 1740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "968c8805186d2d62",
+        "type": "change",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Please try again",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1220,
+        "y": 1740,
+        "wires": [
+            [
+                "b29593393d7e6d79"
+            ]
+        ]
+    },
+    {
+        "id": "c7ebc19a93781510",
+        "type": "switch",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "property": "checkNewPass",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1050,
+        "y": 1700,
+        "wires": [
+            [
+                "c91bd2cc270c78a8"
+            ],
+            [
+                "968c8805186d2d62"
+            ]
+        ]
+    },
+    {
+        "id": "306a9da980f8c484",
+        "type": "ui_toast",
+        "z": "3a98f53728c7e715",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "className": "",
+        "topic": "Password is changed successfully",
+        "name": "Alert",
+        "x": 1390,
+        "y": 1660,
+        "wires": [
+            [
+                "7382a38820656744"
+            ]
+        ]
+    },
+    {
+        "id": "c91bd2cc270c78a8",
+        "type": "change",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Please log in again",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1220,
+        "y": 1660,
+        "wires": [
+            [
+                "306a9da980f8c484"
+            ]
+        ]
+    },
+    {
+        "id": "2ff0d3944084eb71",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Go to change password page",
+        "func": "msg.payload = {\n    \"group\": {\n        \"hide\": [\n            \"Parking_System_Welcome_to_Parking_System\",\n            \"Parking_System_Login\",\n            \"Parking_System_Information\",\n            \"Parking_System_Payment\",\n            \"Parking_System_Safety\",\n            \"Parking_System_Parking_Guard\"\n        ],\n        \"show\": [\n            \"Parking_System_Change_password\",\n        ]\n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 1540,
+        "wires": [
+            [
+                "cb66b1b246982eef"
+            ]
+        ]
+    },
+    {
+        "id": "cb66b1b246982eef",
+        "type": "ui_ui_control",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "events": "all",
+        "x": 620,
+        "y": 1540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cfc294ee9563601e",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Set new password",
+        "method": "PUT",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/pass.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1770,
+        "y": 1660,
+        "wires": [
+            [
+                "4e79f5f6ba7116bb"
+            ]
+        ]
+    },
+    {
+        "id": "7382a38820656744",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Set new password",
+        "func": "msg.payload=`\"${msg.confirm_pass}\"`;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1570,
+        "y": 1660,
+        "wires": [
+            [
+                "cfc294ee9563601e"
+            ]
+        ]
+    },
+    {
+        "id": "01bb8e0ac95d96d1",
+        "type": "comment",
+        "z": "3a98f53728c7e715",
+        "name": "Change password",
+        "info": "",
+        "x": 130,
+        "y": 1680,
+        "wires": []
+    },
+    {
+        "id": "6af3260751ca78f9",
+        "type": "comment",
+        "z": "3a98f53728c7e715",
+        "name": "Payment",
+        "info": "",
+        "x": 120,
+        "y": 2000,
+        "wires": []
+    },
+    {
+        "id": "bac155344d8e539d",
+        "type": "ui_button",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "group": "ea6febeb9bb86144",
+        "order": 16,
+        "width": "4",
+        "height": "1",
+        "passthru": false,
+        "label": "Check out the bill",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "autorenew",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 370,
+        "y": 2180,
+        "wires": [
+            [
+                "0fc8121f86dbad9f"
+            ]
+        ]
+    },
+    {
+        "id": "11b1015f49a6ea38",
+        "type": "ui_button",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "group": "ea6febeb9bb86144",
+        "order": 14,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "Back",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "arrow_back",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 110,
+        "y": 2300,
+        "wires": [
+            [
+                "ed4ac0404752ad5a"
+            ]
+        ]
+    },
+    {
+        "id": "ed4ac0404752ad5a",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Go to code page",
+        "func": "msg.payload = {\n    \"group\": {\n        \"hide\": [\n            \"Parking_System_Welcome_to_Parking_System\",\n            \"Parking_System_Login\",\n            \"Parking_System_Information\",\n            \"Parking_System_Payment\",\n            \"Parking_System_Safety\",\n            \"Parking_System_Change_password\"\n        ],\n        \"show\": [\n            \"Parking_System_Parking_Guard\",\n        ]\n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 2300,
+        "wires": [
+            [
+                "a84d17610ee7c5d2"
+            ]
+        ]
+    },
+    {
+        "id": "a84d17610ee7c5d2",
+        "type": "ui_ui_control",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "events": "all",
+        "x": 460,
+        "y": 2300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4d91b3330a44010a",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Go to welcome page",
+        "func": "msg.payload = {\n    \"group\": {\n        \"hide\": [\n            \"Parking_System_Change_password\",\n            \"Parking_System_Login\",\n            \"Parking_System_Information\",\n            \"Parking_System_Payment\",\n            \"Parking_System_Safety\",\n            \"Parking_System_Parking_Guard\"\n        ],\n        \"show\": [\n            \"Parking_System_Welcome_to_Parking_System\"\n        ]\n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1480,
+        "y": 2140,
+        "wires": [
+            [
+                "2087aae821cfb564"
+            ]
+        ]
+    },
+    {
+        "id": "2087aae821cfb564",
+        "type": "ui_ui_control",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "events": "all",
+        "x": 1700,
+        "y": 2140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "932895e6537dc23f",
+        "type": "ui_toast",
+        "z": "3a98f53728c7e715",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "className": "",
+        "topic": "Thank you for your patronage                                                                                                                                               ",
+        "name": "Alert",
+        "x": 1230,
+        "y": 2140,
+        "wires": [
+            [
+                "4d91b3330a44010a",
+                "ac825a3e3268aa22"
+            ]
+        ]
+    },
+    {
+        "id": "84a9384b03a052b8",
+        "type": "change",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Have a nice journey",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 2140,
+        "wires": [
+            [
+                "932895e6537dc23f"
+            ]
+        ]
+    },
+    {
+        "id": "4aa85adf8a07def1",
+        "type": "ui_ui_control",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "events": "all",
+        "x": 580,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fa5a401240b33a61",
+        "type": "mqtt out",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "topic": "20127329/test",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "765b630df8a64537",
+        "x": 2740,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "a0e22bb71251fcf8",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Open barrier",
+        "func": "\nconst target=\"open\"\nmsg.payload=target;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 380,
+        "wires": [
+            [
+                "e54ccc1f6d69aeaa"
+            ]
+        ]
+    },
+    {
+        "id": "55e33b2e357cbd21",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Set code",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/parkingCode.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 2020,
+        "y": 460,
+        "wires": [
+            [
+                "37d9d8ed1d1650fe"
+            ]
+        ]
+    },
+    {
+        "id": "1ce7ca9706542e8f",
+        "type": "mqtt in",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "topic": "20127329/test",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "765b630df8a64537",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 2880,
+        "wires": [
+            [
+                "0c56f5810b31c8dc",
+                "86a188f950167583",
+                "9c6f41b75f96f2d0",
+                "f32ada70f19803dc"
+            ]
+        ]
+    },
+    {
+        "id": "0c56f5810b31c8dc",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Handle value",
+        "func": "const str=''+msg.payload;\nif (str.includes(\"Fire\"))\n{\n    const value =str.split(\":\");\n    flow.set(\"fire\", value[1]);\n}\nif (str.includes(\"Distance\"))\n{\n    const value = str.split(\":\");\n    flow.set(\"distance\", value[1]);\n}\nif (msg.payload==\"take\")\n{\n    flow.set(\"take\",msg.payload);\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 2920,
+        "wires": [
+            [
+                "ea3d089c29ec5635",
+                "2e4a29aa87fe9534"
+            ]
+        ]
+    },
+    {
+        "id": "ea3d089c29ec5635",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Set fire",
+        "func": "msg.payload=flow.get(\"fire\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 2880,
+        "wires": [
+            [
+                "e48f0140b7ccbeb3"
+            ]
+        ]
+    },
+    {
+        "id": "3bf4d5bc9b392afb",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "BroadCastID",
+        "func": "msg.payload=\"ID-\"+msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2550,
+        "y": 580,
+        "wires": [
+            [
+                "fa5a401240b33a61"
+            ]
+        ]
+    },
+    {
+        "id": "728dca915e96f448",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Send Check Pin KeyPad",
+        "func": " msg.payload=\"check\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1350,
+        "y": 2320,
+        "wires": [
+            [
+                "c3f34ef4fbed276d"
+            ]
+        ]
+    },
+    {
+        "id": "e54ccc1f6d69aeaa",
+        "type": "mqtt out",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "topic": "20127329/test",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "765b630df8a64537",
+        "x": 940,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "c3f34ef4fbed276d",
+        "type": "mqtt out",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "topic": "20127329/test",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "765b630df8a64537",
+        "x": 1580,
+        "y": 2320,
+        "wires": []
+    },
+    {
+        "id": "fe6611605944732c",
+        "type": "mqtt out",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "topic": "20127329/test",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "765b630df8a64537",
+        "x": 1420,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "2730014cad59d31e",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Set value On/Off HightSecurity",
+        "func": "if(msg.payload==true)\n{\n    msg.payload=\"Onhightsecurity\"\n}else{\n    msg.payload = \"Offhightsecurity\"\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 1400,
+        "wires": [
+            [
+                "fe6611605944732c"
+            ]
+        ]
+    },
+    {
+        "id": "2e4a29aa87fe9534",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Set Distance",
+        "func": "msg.payload=flow.get(\"distance\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 2940,
+        "wires": [
+            [
+                "4380efa284ac824d"
+            ]
+        ]
+    },
+    {
+        "id": "c01dd0384c7903d8",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Set time start",
+        "func": "msg.payload = `\"${new Date().toLocaleTimeString()}\"`;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2030,
+        "y": 500,
+        "wires": [
+            [
+                "7fcd00d7554dc457"
+            ]
+        ]
+    },
+    {
+        "id": "cf765a5ef8ecf560",
+        "type": "comment",
+        "z": "3a98f53728c7e715",
+        "name": "Nhan tin hieu tu MQTT",
+        "info": "",
+        "x": 140,
+        "y": 2840,
+        "wires": []
+    },
+    {
+        "id": "3c66178e61178358",
+        "type": "ui_text",
+        "z": "3a98f53728c7e715",
+        "group": "ea6febeb9bb86144",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Time exit",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1500,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "d64f6b0ae788094d",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Set time exit",
+        "func": "msg.payload = `\"${new Date().toLocaleTimeString()}\"`;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 1000,
+        "wires": [
+            [
+                "4d0ff53e6ab94575"
+            ]
+        ]
+    },
+    {
+        "id": "78c910c1f70e8d8b",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "handle price",
+        "func": "// let timeEntrance = \"11:45:12 AM\";\n// let timeExit = \"11:45:12 AM\";\nconst timehourEntrance = flow.get(\"timeEntrance\").split(\" \");\nconst timehourExit = flow.get(\"timeExit\").split(\" \");\nlet price = 0;\nif (timehourEntrance[1] === \"am\" && timehourExit[1] === \"pm\") {\n    price = 5000;\n}\nelse if (timehourEntrance[1] === \"pm\" && timehourExit[1] === \"pm\") {\n    price = 10000;\n}\nelse {\n    price = 50000;\n}\nmsg.payload = \"\" + price;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1730,
+        "y": 1100,
+        "wires": [
+            [
+                "47e85ea916513a20",
+                "c96f28bd652315a2",
+                "942fccd85fdd24f0"
+            ]
+        ]
+    },
+    {
+        "id": "337058370b147348",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Send Done KeyPad",
+        "func": "msg.payload=\"done\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 2080,
+        "wires": [
+            [
+                "685ea8a70cd2767e"
+            ]
+        ]
+    },
+    {
+        "id": "685ea8a70cd2767e",
+        "type": "mqtt out",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "topic": "20127329/test",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "765b630df8a64537",
+        "x": 1240,
+        "y": 2080,
+        "wires": []
+    },
+    {
+        "id": "4f7c026ac0a48e8e",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Check in cash payment",
+        "func": "const a=flow.get(\"take\");\nif(a==='take'){\n    msg.payload=1;\n}\nelse msg.payload=0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 2240,
+        "wires": [
+            [
+                "d5da2a3dcfb4fe3d"
+            ]
+        ]
+    },
+    {
+        "id": "d5da2a3dcfb4fe3d",
+        "type": "switch",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1170,
+        "y": 2220,
+        "wires": [
+            [
+                "84a9384b03a052b8"
+            ],
+            [
+                "aa123bbc5fd5957a",
+                "728dca915e96f448"
+            ]
+        ]
+    },
+    {
+        "id": "305e7c1ebd74e65b",
+        "type": "ui_toast",
+        "z": "3a98f53728c7e715",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": true,
+        "className": "",
+        "topic": "Notice                                                                                                                                 ",
+        "name": "Alert",
+        "x": 1510,
+        "y": 2260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aa123bbc5fd5957a",
+        "type": "change",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Please check out payment on LCD",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1340,
+        "y": 2260,
+        "wires": [
+            [
+                "305e7c1ebd74e65b"
+            ]
+        ]
+    },
+    {
+        "id": "9d03739bab04cd9d",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Get payment method",
+        "func": "flow.set(\"payment\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 2240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "53e1aca2ec910a23",
+        "type": "switch",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Banking",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "In cash",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 730,
+        "y": 2180,
+        "wires": [
+            [
+                "337058370b147348",
+                "84a9384b03a052b8"
+            ],
+            [
+                "4f7c026ac0a48e8e",
+                "224842af926b4d79"
+            ]
+        ]
+    },
+    {
+        "id": "0fc8121f86dbad9f",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "payment method",
+        "func": "msg.payload=flow.get(\"payment\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 2180,
+        "wires": [
+            [
+                "53e1aca2ec910a23"
+            ]
+        ]
+    },
+    {
+        "id": "5d09dc542c75d86b",
+        "type": "ui_chart",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "group": "9e5f3603f9e80331",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Gas and Fire values",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1300,
+        "y": 2880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f782f26403762883",
+        "type": "ui_text",
+        "z": "3a98f53728c7e715",
+        "group": "babce6fc67eb89b7",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Code",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 2490,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "e5f56036e6481355",
+        "type": "ui_text",
+        "z": "3a98f53728c7e715",
+        "group": "ea6febeb9bb86144",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Time entrance",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 2840,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "7dc708d7f83c8c7a",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Set price",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/price.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 2120,
+        "y": 1120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "074cf7182024edbd",
+        "type": "comment",
+        "z": "3a98f53728c7e715",
+        "name": "Notification",
+        "info": "",
+        "x": 380,
+        "y": 2100,
+        "wires": []
+    },
+    {
+        "id": "7fcd00d7554dc457",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Set time start",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/timeEntrance.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 2250,
+        "y": 500,
+        "wires": [
+            [
+                "3d94d4b72e5c2473"
+            ]
+        ]
+    },
+    {
+        "id": "f888eb1d10bda67c",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Set date start",
+        "func": "let date = new Date().getDate();\nif (date === 1) date += 'st';\nelse if (date === 2) date += 'nd';\nelse date += 'th';\n\nconst monthArray = [\"January\", \"February\", \"March\", \"April\", \"May\", \"June\", \"July\", \"August\", \"September\", \"October\", \"November\", \"December\"];\nlet month = monthArray[new Date().getMonth()];\n\nlet year = new Date().getFullYear();\n\nmsg.payload = `\"${month} ${date}, ${year}\"`;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2030,
+        "y": 540,
+        "wires": [
+            [
+                "66e04288855e122e"
+            ]
+        ]
+    },
+    {
+        "id": "66e04288855e122e",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Set time start",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/date.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 2250,
+        "y": 540,
+        "wires": [
+            [
+                "cb5c4dd85fd3e786"
+            ]
+        ]
+    },
+    {
+        "id": "3d94d4b72e5c2473",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Get time start",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/timeEntrance.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 2520,
+        "y": 680,
+        "wires": [
+            [
+                "f0b2a2feb24e41fc",
+                "e5f56036e6481355"
+            ]
+        ]
+    },
+    {
+        "id": "ce4ae03a9e63a467",
+        "type": "ui_text",
+        "z": "3a98f53728c7e715",
+        "group": "babce6fc67eb89b7",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Date",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 2610,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "cb5c4dd85fd3e786",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Get date start",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/date.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 2440,
+        "y": 760,
+        "wires": [
+            [
+                "ce4ae03a9e63a467"
+            ]
+        ]
+    },
+    {
+        "id": "869f7a1a2b9a2c97",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Get Code",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/parkingCode.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 260,
+        "y": 380,
+        "wires": [
+            [
+                "8aa9677938a1d490"
+            ]
+        ]
+    },
+    {
+        "id": "8aa9677938a1d490",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "check code",
+        "func": "if(msg.payload===\"0\"){\n    msg.check=1;\n}\nelse{\n    msg.check = 0;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 380,
+        "wires": [
+            [
+                "55a757da66d30ee6"
+            ]
+        ]
+    },
+    {
+        "id": "55a757da66d30ee6",
+        "type": "switch",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "property": "check",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 590,
+        "y": 380,
+        "wires": [
+            [
+                "a0e22bb71251fcf8"
+            ]
+        ]
+    },
+    {
+        "id": "5c967c7dc7841145",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Get code",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/parkingCode.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1320,
+        "y": 540,
+        "wires": [
+            [
+                "26d7c44fa6e5d6ed"
+            ]
+        ]
+    },
+    {
+        "id": "26d7c44fa6e5d6ed",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "check code",
+        "func": "if(msg.payload===\"0\"){\n    msg.check=1;\n}\nelse msg.check=0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1510,
+        "y": 540,
+        "wires": [
+            [
+                "ba02a533f7ef4727"
+            ]
+        ]
+    },
+    {
+        "id": "ba02a533f7ef4727",
+        "type": "switch",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "property": "check",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1650,
+        "y": 540,
+        "wires": [
+            [
+                "7e5d617779121e36",
+                "cddb3016c068c1b6"
+            ],
+            [
+                "37d9d8ed1d1650fe",
+                "cddb3016c068c1b6",
+                "cb5c4dd85fd3e786",
+                "3d94d4b72e5c2473"
+            ]
+        ]
+    },
+    {
+        "id": "37d9d8ed1d1650fe",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Get code",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/parkingCode.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 2240,
+        "y": 580,
+        "wires": [
+            [
+                "d7fbc623fe77ce82",
+                "f782f26403762883",
+                "3bf4d5bc9b392afb"
+            ]
+        ]
+    },
+    {
+        "id": "4d0ff53e6ab94575",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Set time exit",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/timeExit.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1130,
+        "y": 1000,
+        "wires": [
+            [
+                "770088c57b51db3b"
+            ]
+        ]
+    },
+    {
+        "id": "770088c57b51db3b",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Get time exit",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/timeExit.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1290,
+        "y": 1000,
+        "wires": [
+            [
+                "3c66178e61178358",
+                "072c70a8f4952f4e"
+            ]
+        ]
+    },
+    {
+        "id": "cb43d2b6442589b3",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Initialize flow value to empty",
+        "func": "flow.set(\"fire\",\"\");\nflow.set(\"dangerous\", \"\");\nflow.set(\"distance\", \"\");\nflow.set(\"take\",\"\");\nflow.set(\"timeEntrance\", \"\");\nflow.set(\"timeExit\", \"\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e48f0140b7ccbeb3",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Set fire",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/fire.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 820,
+        "y": 2880,
+        "wires": [
+            [
+                "2f0e6c411c81a444"
+            ]
+        ]
+    },
+    {
+        "id": "2f0e6c411c81a444",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Get fire",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/fire.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1000,
+        "y": 2880,
+        "wires": [
+            [
+                "5d09dc542c75d86b"
+            ]
+        ]
+    },
+    {
+        "id": "fb7ef2c6d8f86a8e",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Get time start",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/timeEntrance.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1040,
+        "y": 1120,
+        "wires": [
+            [
+                "614608ea1ead8ebc"
+            ]
+        ]
+    },
+    {
+        "id": "614608ea1ead8ebc",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Get time entrance",
+        "func": "flow.set(\"timeEntrance\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1510,
+        "y": 1120,
+        "wires": [
+            [
+                "78c910c1f70e8d8b"
+            ]
+        ]
+    },
+    {
+        "id": "072c70a8f4952f4e",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Get time exit",
+        "func": "flow.set(\"timeExit\",msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1510,
+        "y": 1060,
+        "wires": [
+            [
+                "78c910c1f70e8d8b"
+            ]
+        ]
+    },
+    {
+        "id": "37bea9b9cdb85bc2",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Set code",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/parkingCode.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1980,
+        "y": 2300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ce4c1f2c6e7585f0",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Set Date",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/date.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1980,
+        "y": 2180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a3890a78f0e48b70",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Set distance",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/distance.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1990,
+        "y": 2220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "31a05fe85dbdf915",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Set fire",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/fire.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1980,
+        "y": 2260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "94e15292c24c4196",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Set time exit",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/timeExit.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1990,
+        "y": 2420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "edf86ffc9b419ae9",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Set time start",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/timeEntrance.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1990,
+        "y": 2380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0df8b421f9375568",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Set price",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/price.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1980,
+        "y": 2340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "82d93aa016537b15",
+        "type": "ui_text",
+        "z": "3a98f53728c7e715",
+        "group": "babce6fc67eb89b7",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Safe Distance",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 2220,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "cddb3016c068c1b6",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Get distance",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/distance.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1850,
+        "y": 680,
+        "wires": [
+            [
+                "b6a8eace80bdcffd"
+            ]
+        ]
+    },
+    {
+        "id": "270907bc8a0fbd44",
+        "type": "inject",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 1340,
+        "wires": [
+            [
+                "0949992f7a2b4162",
+                "794de2ccd3c1f646"
+            ]
+        ]
+    },
+    {
+        "id": "4380efa284ac824d",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Set distance",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/distance.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 830,
+        "y": 2940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c96f28bd652315a2",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Write price to db",
+        "func": "msg.payload=`\"${msg.payload}\"`\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1940,
+        "y": 1120,
+        "wires": [
+            [
+                "7dc708d7f83c8c7a"
+            ]
+        ]
+    },
+    {
+        "id": "ac825a3e3268aa22",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Set values to \"0\"",
+        "func": "msg.payload=`\"${\"0\"}\"`;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1510,
+        "y": 2200,
+        "wires": [
+            [
+                "ce4c1f2c6e7585f0",
+                "a3890a78f0e48b70",
+                "31a05fe85dbdf915",
+                "37bea9b9cdb85bc2",
+                "0df8b421f9375568",
+                "edf86ffc9b419ae9",
+                "94e15292c24c4196",
+                "99452b10d8c46881"
+            ]
+        ]
+    },
+    {
+        "id": "942fccd85fdd24f0",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Send Price",
+        "func": "msg.payload=msg.payload+\" VND\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 1000,
+        "wires": [
+            [
+                "71e545eae99ef574"
+            ]
+        ]
+    },
+    {
+        "id": "71e545eae99ef574",
+        "type": "mqtt out",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "topic": "20127329/test",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "54f4b498516d97c9",
+        "x": 2140,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "224842af926b4d79",
+        "type": "debug",
+        "z": "3a98f53728c7e715",
+        "name": "debug 16",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 2320,
+        "wires": []
+    },
+    {
+        "id": "13df46d22e238590",
+        "type": "inject",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1630,
+        "y": 680,
+        "wires": [
+            [
+                "cddb3016c068c1b6"
+            ]
+        ]
+    },
+    {
+        "id": "b6a8eace80bdcffd",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Set Valid Or Invalid Distance",
+        "func": "if (msg.payload >= 150 && msg.payload <= 250) {\n    msg.payload = msg.payload + \" - VALID\";\n}\nelse {\n    msg.payload = msg.payload + \" - INVALID\";\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2000,
+        "y": 740,
+        "wires": [
+            [
+                "82d93aa016537b15"
+            ]
+        ]
+    },
+    {
+        "id": "86a188f950167583",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Set DataFromOffline",
+        "func": "let checkPaymentOffline=0;\nif(msg.payload==\"setdata\")\n{\n    checkPaymentOffline=1;\n}\n\nmsg.payload = checkPaymentOffline;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 2760,
+        "wires": [
+            [
+                "9dce25a54221d66c"
+            ]
+        ]
+    },
+    {
+        "id": "b3d0470d334711b6",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Set code",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/parkingCode.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 980,
+        "y": 2520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "32df4324081787c1",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Set date",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/date.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 820,
+        "y": 2460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "788ed2dbdf363590",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Set distance",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/distance.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 830,
+        "y": 2500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a5212a75b354d29e",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Set fire",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/fire.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 980,
+        "y": 2480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bf7b16cc5fd7c02d",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Set time exit",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/timeExit.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1010,
+        "y": 2660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0fe11dd89166410a",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Set time start",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/timeEntrance.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1030,
+        "y": 2600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ba3557eb9dad7da1",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Set price",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/price.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1020,
+        "y": 2560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9dce25a54221d66c",
+        "type": "switch",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 710,
+        "y": 2760,
+        "wires": [
+            [],
+            [
+                "7c881b0a0898c5cd",
+                "07e9e42cb2e8de07",
+                "78062f92c3d13a88"
+            ]
+        ]
+    },
+    {
+        "id": "7c881b0a0898c5cd",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Set data to 0",
+        "func": "msg.payload = `\"${\"0\"}\"`;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 2620,
+        "wires": [
+            [
+                "32df4324081787c1",
+                "788ed2dbdf363590",
+                "a5212a75b354d29e",
+                "b3d0470d334711b6",
+                "ba3557eb9dad7da1",
+                "0fe11dd89166410a",
+                "bf7b16cc5fd7c02d",
+                "dfe3e273253ff305"
+            ]
+        ]
+    },
+    {
+        "id": "3ba60e859b1e10f2",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Set time exit",
+        "func": "msg.payload = `\"${new Date().toLocaleTimeString()}\"`;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 3000,
+        "wires": [
+            [
+                "1b3adf867eb32c50"
+            ]
+        ]
+    },
+    {
+        "id": "1b3adf867eb32c50",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Set time exit",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/timeExit.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 950,
+        "y": 3000,
+        "wires": [
+            [
+                "1d1738622be5e428"
+            ]
+        ]
+    },
+    {
+        "id": "1d1738622be5e428",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Get time exit",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/timeExit.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1110,
+        "y": 3000,
+        "wires": [
+            [
+                "80feffb3c141bf3f"
+            ]
+        ]
+    },
+    {
+        "id": "d5368c69939b971b",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Get time entrance",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/timeEntrance.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 750,
+        "y": 3060,
+        "wires": [
+            [
+                "d0d0acec20597db6"
+            ]
+        ]
+    },
+    {
+        "id": "d0d0acec20597db6",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Get time entrance",
+        "func": "flow.set(\"timeEntrance\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 3060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c671aae09e282413",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "handle price",
+        "func": "// let timeEntrance = \"11:45:12 AM\";\n// let timeExit = \"11:45:12 AM\";\nconst timehourEntrance = flow.get(\"timeEntrance\").split(\" \");\nconst timehourExit = flow.get(\"timeExit\").split(\" \");\nlet price = 0;\nif (timehourEntrance[1] === \"am\" && timehourExit[1] === \"am\") {\n    price = 5000;\n}\nelse if (timehourEntrance[1] === \"pm\" && timehourExit[1] === \"pm\") {\n    price = 10000;\n}\nelse {\n    price = 50000;\n}\nmsg.payload = \"\" + price;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 3240,
+        "wires": [
+            [
+                "ebec670d71afed63",
+                "b1eb5d46efa3197c",
+                "f4e2a588ca44b2fe"
+            ]
+        ]
+    },
+    {
+        "id": "e7119d205069bf55",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Set price",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/price.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1340,
+        "y": 3240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ebec670d71afed63",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Write price to db",
+        "func": "msg.payload=`\"${msg.payload}\"`\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1150,
+        "y": 3240,
+        "wires": [
+            [
+                "e7119d205069bf55"
+            ]
+        ]
+    },
+    {
+        "id": "b1eb5d46efa3197c",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Send Price OFF",
+        "func": "\nmsg.payload=msg.payload+\" VND\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1180,
+        "y": 3120,
+        "wires": [
+            [
+                "268368809ea51331"
+            ]
+        ]
+    },
+    {
+        "id": "268368809ea51331",
+        "type": "mqtt out",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "topic": "20127329/test",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "54f4b498516d97c9",
+        "x": 1400,
+        "y": 3120,
+        "wires": []
+    },
+    {
+        "id": "80feffb3c141bf3f",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Get time exit",
+        "func": "flow.set(\"timeExit\",msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1270,
+        "y": 3000,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "07e9e42cb2e8de07",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Go to welcome page",
+        "func": "msg.payload = {\n    \"group\": {\n        \"hide\": [\n          \n            \"Parking_System_Parking_Guard\",\n            \"Parking_System_Information\",\n            \"Parking_System_Login\",\n            \"Parking_System_Payment\",\n            \"Parking_System_Safety\",\n            \"Parking_System_Change_password\"\n        ],\n        \"show\": [\n              \"Parking_System_Welcome_to_Parking_System\"\n        ]\n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 2760,
+        "wires": [
+            [
+                "103bac0081140b30"
+            ]
+        ]
+    },
+    {
+        "id": "103bac0081140b30",
+        "type": "ui_ui_control",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "events": "all",
+        "x": 1140,
+        "y": 2760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "78062f92c3d13a88",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "send Done",
+        "func": "msg.payload=\"done\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 2820,
+        "wires": [
+            [
+                "c797e7249dca8876"
+            ]
+        ]
+    },
+    {
+        "id": "c797e7249dca8876",
+        "type": "mqtt out",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "topic": "20127329/test",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "54f4b498516d97c9",
+        "x": 1080,
+        "y": 2820,
+        "wires": []
+    },
+    {
+        "id": "9c6f41b75f96f2d0",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Send Price to Device",
+        "func": "let forward=0;\nif(msg.payload==\"getPrice\")\n{\n    forward=1;\n}\nmsg.payload=forward;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 2980,
+        "wires": [
+            [
+                "2da3d03e56e1d2cf"
+            ]
+        ]
+    },
+    {
+        "id": "d8b18cab22d9cfa7",
+        "type": "mqtt out",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "topic": "20127329/test",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "54f4b498516d97c9",
+        "x": 1380,
+        "y": 3180,
+        "wires": []
+    },
+    {
+        "id": "2da3d03e56e1d2cf",
+        "type": "switch",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 550,
+        "y": 2980,
+        "wires": [
+            [],
+            [
+                "3ba60e859b1e10f2",
+                "d5368c69939b971b",
+                "7b3db945e2267120"
+            ]
+        ]
+    },
+    {
+        "id": "f4e2a588ca44b2fe",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "function 33",
+        "func": "msg.payload=\"continue\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 3180,
+        "wires": [
+            [
+                "d8b18cab22d9cfa7"
+            ]
+        ]
+    },
+    {
+        "id": "7b3db945e2267120",
+        "type": "delay",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 720,
+        "y": 3160,
+        "wires": [
+            [
+                "c671aae09e282413"
+            ]
+        ]
+    },
+    {
+        "id": "f32ada70f19803dc",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Caution THEFT",
+        "func": "let event=0;\nif(msg.payload==\"THEFT\")\n{\n    event=1;\n}\nif (msg.payload == \"HOT\")\n{\n    event=2;\n}\nmsg.payload=event;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 3040,
+        "wires": [
+            [
+                "a8cfc59eb3eda74b"
+            ]
+        ]
+    },
+    {
+        "id": "9d65aaa8ef3742a2",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://maker.ifttt.com/trigger/Detected Theft/json/with/key/mH2D08bnIDk7dkD8XCN87hsOmCJGUn9jDlDnNytxyCd",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 550,
+        "y": 3060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a8cfc59eb3eda74b",
+        "type": "switch",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 390,
+        "y": 3100,
+        "wires": [
+            [
+                "1a251bbe3fdac890"
+            ],
+            [
+                "9d65aaa8ef3742a2",
+                "e417fc5e90d397b8"
+            ],
+            [
+                "a972011a9f9f3f34"
+            ]
+        ]
+    },
+    {
+        "id": "a972011a9f9f3f34",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://maker.ifttt.com/trigger/Fire Detected/json/with/key/mH2D08bnIDk7dkD8XCN87hsOmCJGUn9jDlDnNytxyCd",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 570,
+        "y": 3140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b204657ed2867632",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Get dangerous",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/dangerous.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 880,
+        "y": 3300,
+        "wires": [
+            [
+                "f688649a12100d65"
+            ]
+        ]
+    },
+    {
+        "id": "77904ace5d882a7a",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Set dangerous",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/dangerous.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 640,
+        "y": 3300,
+        "wires": [
+            [
+                "b204657ed2867632"
+            ]
+        ]
+    },
+    {
+        "id": "ebdc1346f3223982",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Set dangerous",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/dangerous.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 680,
+        "y": 3240,
+        "wires": [
+            [
+                "b204657ed2867632"
+            ]
+        ]
+    },
+    {
+        "id": "99452b10d8c46881",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Set dangerous",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/dangerous.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 2000,
+        "y": 2460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dfe3e273253ff305",
+        "type": "http request",
+        "z": "3a98f53728c7e715",
+        "name": "Set dangerous",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://fir-93b24-default-rtdb.firebaseio.com/ParkingSystem/dangerous.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1020,
+        "y": 2700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e417fc5e90d397b8",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Get dangerous",
+        "func": "msg.payload=100;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 3180,
+        "wires": [
+            [
+                "ebdc1346f3223982"
+            ]
+        ]
+    },
+    {
+        "id": "1a251bbe3fdac890",
+        "type": "function",
+        "z": "3a98f53728c7e715",
+        "name": "Set fire",
+        "func": "msg.payload=flow.get(\"fire\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 3300,
+        "wires": [
+            [
+                "77904ace5d882a7a"
+            ]
+        ]
+    },
+    {
+        "id": "6d05da2bc5a192bb",
+        "type": "ui_group",
+        "name": "Parking Guard",
+        "tab": "65291d40e35796bf",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "babce6fc67eb89b7",
+        "type": "ui_group",
+        "name": "Information",
+        "tab": "65291d40e35796bf",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ea6febeb9bb86144",
+        "type": "ui_group",
+        "name": "Payment",
+        "tab": "65291d40e35796bf",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9e5f3603f9e80331",
+        "type": "ui_group",
+        "name": "Safety",
+        "tab": "65291d40e35796bf",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b434e1a6b820424f",
+        "type": "ui_group",
+        "name": "Login",
+        "tab": "65291d40e35796bf",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f54ef33d5fc74833",
+        "type": "ui_group",
+        "name": "Welcome to Parking System",
+        "tab": "65291d40e35796bf",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "31f4e15f9c790534",
+        "type": "ui_group",
+        "name": "Change password",
+        "tab": "65291d40e35796bf",
+        "order": 7,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "765b630df8a64537",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "test.mosquitto.org",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "54f4b498516d97c9",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "test.mosquitto.org",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "65291d40e35796bf",
+        "type": "ui_tab",
+        "name": "Parking System",
+        "icon": "directions_car",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    }
+]
